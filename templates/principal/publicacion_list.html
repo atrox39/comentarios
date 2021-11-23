@@ -1,0 +1,10 @@
+{% extends 'base/main.html' %}
+{% block title %}Lista de publicacion{% endblock %}
+{% block body %}
+<div class="container mt-4">
+    <h2>Publicaciones</h2>
+    {% for publicacion in object_list %}
+        {% include 'partials/publicacion.html' with titulo=publicacion.titulo descripcion=publicacion.descripcion contenido=publicacion.contenido fecha=publicacion.fecha_creacion id=publicacion.id %}
+    {% endfor %}
+</div>
+{% endblock %}

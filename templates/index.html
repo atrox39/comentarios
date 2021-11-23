@@ -1,0 +1,8 @@
+{% extends 'base/main.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="container mt-4">
+    <h3>Lista de publicaciones</h3>
+    {% include 'partials/publicacion.html' with titulo='Ejemplo 1' descripcion='Descripcion basica' contenido='Contenido jeje' fecha='11/22/2021' id='1' %}
+</div>
+{% endblock %}
